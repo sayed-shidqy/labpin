@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>LABPIN - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="assets/images/logo.png" alt="logo" height="40">
+      <span class="brand">LABPIN</span>
+    </div>
+    <div class="nav-right">
+      <span id="userEmail"></span>
+      <button id="logoutBtn" class="btn-logout">Logout</button>
+    </div>
+  </nav>
+
+  <div class="dashboard">
+    <div class="stats">
+      <div class="stat-card"><span class="num" id="statTotal">0</span><span>Total Alat</span></div>
+      <div class="stat-card green"><span class="num" id="statTersedia">0</span><span>Tersedia</span></div>
+      <div class="stat-card orange"><span class="num" id="statDipinjam">0</span><span>Dipinjam</span></div>
+      <div class="stat-card red"><span class="num" id="statRusak">0</span><span>Rusak</span></div>
+    </div>
+
+    <h2>Daftar Alat Laboratorium</h2>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Cari alat...">
+    </div>
+
+    <div class="alat-grid" id="alatGrid"></div>
+
+    <h2 style="margin-top:40px">Peminjaman Aktif Saya</h2>
+    <div id="peminjamanAktif" class="peminjaman-list"></div>
+  </div>
+
+  <!-- Modal Peminjaman -->
+  <div id="modalPinjam" class="modal hidden">
+    <div class="modal-content">
+      <h3>Pinjam: <span id="modalAlatNama"></span></h3>
+      <label>Tanggal Pinjam</label>
+      <input type="date" id="tglPinjam">
+      <label>Jam Pinjam</label>
+      <input type="time" id="jamPinjam">
+      <label>Rencana Kembali</label>
+      <input type="date" id="tglKembali">
+      <label>Jam Kembali</label>
+      <input type="time" id="jamKembali">
+      <label>Keterangan</label>
+      <textarea id="keterangan" rows="3"></textarea>
+      <div class="modal-buttons">
+        <button id="btnPinjamConfirm" class="btn-primary">Ajukan Peminjaman</button>
+        <button id="btnPinjamCancel" class="btn-secondary">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

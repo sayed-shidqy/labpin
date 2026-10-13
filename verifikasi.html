@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LABPIN - Verifikasi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/verifikasi.css">
+</head>
+<body>
+  <div class="verif-container">
+    <div class="verif-card">
+      <div class="icon-wa">💬</div>
+      <h2>Menunggu Verifikasi</h2>
+      <p>Permintaan verifikasi Anda telah dikirim ke WhatsApp Admin/Dosen.</p>
+
+      <div class="status-box">
+        <div class="spinner"></div>
+        <span id="statusText">Menunggu persetujuan dosen...</span>
+      </div>
+
+      <div class="info">
+        <p>📱 Nomor Anda: <strong id="waUser"></strong></p>
+        <p>Jika tidak diverifikasi dalam 5 menit, hubungi:</p>
+        <a href="https://wa.me/6282296275318" class="btn-contact" id="contactBtn">
+          Hubungi Admin (0822-9627-5318)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/verifikasi.js"></script>
+</body>
+</html>

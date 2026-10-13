@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>LABPIN - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <nav class="navbar admin-nav">
+    <div class="nav-left">
+      <img src="assets/images/logo.png" height="40">
+      <span class="brand">LABPIN Admin</span>
+    </div>
+    <button id="logoutAdmin" class="btn-logout">Logout</button>
+  </nav>
+
+  <div class="admin-container">
+    <h2>🔔 Permintaan Verifikasi Mahasiswa</h2>
+    <div id="verifikasiList" class="verifikasi-list"></div>
+
+    <h2 style="margin-top:40px">📦 Kelola Data Alat</h2>
+    <button id="btnTambahAlat" class="btn-primary" style="width:auto;padding:10px 20px;">
+      + Tambah Alat
+    </button>
+    <div id="adminAlatList" class="admin-alat-list"></div>
+
+    <h2 style="margin-top:40px">📋 Peminjaman Mahasiswa</h2>
+    <div id="peminjamanList" class="peminjaman-admin"></div>
+  </div>
+
+  <!-- Modal Tambah Alat -->
+  <div id="modalAlat" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modalAlatTitle">Tambah Alat</h3>
+      <input type="hidden" id="alatId">
+      <input type="text" id="alatKode" placeholder="Kode Alat (cth: ALAT001)">
+      <input type="text" id="alatNama" placeholder="Nama Alat">
+      <input type="text" id="alatKategori" placeholder="Kategori">
+      <input type="number" id="alatJumlah" placeholder="Jumlah" min="0">
+      <select id="alatStatus">
+        <option value="tersedia">Tersedia</option>
+        <option value="dipinjam">Dipinjam</option>
+        <option value="rusak">Rusak</option>
+      </select>
+      <input type="text" id="alatGambar" placeholder="Nama file gambar (cth: multimeter.jpg)">
+      <textarea id="alatNote" rows="2" placeholder="Catatan (opsional)"></textarea>
+      <div class="modal-buttons">
+        <button id="btnSimpanAlat" class="btn-primary">Simpan</button>
+        <button id="btnBatalAlat" class="btn-secondary">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
