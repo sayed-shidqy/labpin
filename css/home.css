@@ -1,0 +1,129 @@
+/* css/home.css */
+.dashboard {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Statistik */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 5px solid #4facfe;
+}
+.stat-card.green { border-left-color: #1f9d55; }
+.stat-card.orange { border-left-color: #f59e0b; }
+.stat-card.red { border-left-color: #ef4444; }
+.stat-card .num {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+.stat-card span:last-child {
+  font-size: 13px;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 20px;
+}
+.search-bar input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fff;
+}
+.search-bar input:focus {
+  outline: none;
+  border-color: #4facfe;
+}
+
+/* Grid Alat */
+.alat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+.alat-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+.alat-card:hover { transform: translateY(-5px); }
+.alat-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: #eee;
+}
+.alat-info {
+  padding: 15px;
+  flex: 1;
+}
+.alat-info h3 { font-size: 16px; margin-bottom: 5px; }
+.alat-info .kode { font-size: 12px; color: #888; margin-bottom: 8px; }
+.alat-info .note {
+  font-size: 12px;
+  color: #d39e00;
+  background: #fff3cd;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.alat-card .btn-pinjam {
+  margin: 15px;
+  padding: 10px;
+  background: #4facfe;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.alat-card .btn-pinjam:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.alat-card .btn-wa {
+  display: block;
+  text-align: center;
+  margin: 0 15px 15px;
+  padding: 10px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Peminjaman Aktif */
+.peminjaman-list { display: flex; flex-direction: column; gap: 10px; }
+.peminjaman-item {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.peminjaman-item small { color: #666; display: block; margin-top: 5px; }

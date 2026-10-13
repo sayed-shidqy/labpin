@@ -1,0 +1,102 @@
+/* css/admin.css */
+.admin-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.admin-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 22px;
+}
+
+/* List Verifikasi */
+.verifikasi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.verif-item {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.verif-actions button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.btn-accept { background: #1f9d55; color: #fff; }
+.btn-accept:hover { background: #16803f; }
+.btn-reject { background: #e02424; color: #fff; }
+.btn-reject:hover { background: #c81e1e; }
+
+/* List Alat Admin */
+.admin-alat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+.admin-alat-item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.admin-alat-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #eee;
+}
+.alat-detail { flex: 1; }
+.alat-detail strong { font-size: 16px; }
+.alat-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.btn-edit { background: #f59e0b; color: #fff; }
+.btn-hapus { background: #ef4444; color: #fff; }
+
+/* List Peminjaman Admin */
+.peminjaman-list, .peminjaman-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+.peminjaman-admin-item {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.peminjaman-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.btn-kembali { background: #3b82f6; color: #fff; }
